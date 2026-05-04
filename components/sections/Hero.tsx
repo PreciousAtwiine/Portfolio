@@ -38,7 +38,7 @@ export default function Hero() {
             className="text-muted-foreground hover:text-foreground transition-colors">
             <Github size={22} />
           </a>
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer"
+          <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors">
             <Linkedin size={22} />
           </a>

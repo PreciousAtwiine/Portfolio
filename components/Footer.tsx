@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, LinkedinIcon, Mail } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
           </a>
           <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin size={18} />
+            <LinkedinIcon size={18} />
           </a>
           <a href="mailto:preciousinshuti3@gmail.com"
             className="text-muted-foreground hover:text-foreground transition-colors">

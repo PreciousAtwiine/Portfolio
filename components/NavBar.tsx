@@ -23,7 +23,9 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -35,7 +37,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.href}>
-              
+              <a
                 href={l.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
@@ -44,7 +46,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            
+            <a
               href="/cv.pdf"
               download
               className="text-sm border border-primary text-primary px-4 py-1.5 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -66,7 +68,7 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4 pt-2">
             {links.map((l) => (
               <li key={l.href}>
-                
+                <a
                   href={l.href}
                   className="text-sm text-muted-foreground hover:text-foreground"
                   onClick={() => setOpen(false)}
