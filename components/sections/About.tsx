@@ -28,21 +28,33 @@ export default function About() {
           </motion.div>
 
           <div className="gird md:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-5 text-slate-400 leading-relaxed">
-                <p>
-                  I&apos;m a <span className="text-white font-semibold">Frontend Developer</span> at {" "}
-                  <span className="text-violet-400 font-semibold">Lumpsum Technologies</span>, where I own the frontend of a production B2B SaaS CRM platform serving enterprise clients. I build complex data-driven interfaces - dashboards, ticketing systems, lead modules - all backed by typed REST APIs.
-                </p>
-                <p>
-                  I&apos;m currently pursuing a{" "} <span className="text-white font-semibold">BSc in Computer Science at Makerere University</span> at {" "}(evening programme) and am available for full-time work Monday to Friday, 8:30am-4:00pm.
-                  I&apos;m open to new opportunities and collaborations. 
-                </p>
-              </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-5 text-slate-400 leading-relaxed">
+
+            <p>
+              I&apos;m a <span className="text-white font-semibold">Full-Stack Developer</span> who
+              builds production-grade web applications end-to-end — from  {" "}
+              <span className="text-white font-semibold"> React</span> and{" "}
+              <span className="text-white font-semibold"> Next.js</span> interfaces to{" "}
+              <span className="text-white font-semibold"> Django</span> and{" "}
+              <span className="text-white font-semibold"> ASP.NET MVC</span> backends.
+            </p>
+
+            <p>
+              I&apos;ve shipped real systems: data-driven dashboards, CRM modules, ticketing
+              and lead management tools backed by typed REST APIs.
+            </p>
+
+            <p>
+              I care about the details — layout precision, performance, and interfaces
+              that actually make sense to use.
+            </p>
+
+          </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 30 }}
