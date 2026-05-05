@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, Mail } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -130,12 +131,14 @@ export default function Hero() {
 
             {/* Photo */}
             <div className="absolute inset-1 rounded-full overflow-hidden glow">
-            <img
-              src="/precious.jpg"
-              alt="Precious Atwiine"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+      <Image
+        src="/precious.png"
+        alt="Precious Atwiine"
+        fill
+        className="object-cover object-top"
+        priority
+      />
+    </div>
           </div>
         </motion.div>
       </div>
