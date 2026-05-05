@@ -131,7 +131,7 @@ export default function Hero() {
             {/* Photo */}
             <div className="absolute inset-1 rounded-full overflow-hidden glow">
             <img
-              src="/atwiine.jpeg"
+              src="/precious.jpg"
               alt="Precious Atwiine"
               className="w-full h-full object-cover object-center"
             />
