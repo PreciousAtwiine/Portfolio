@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, Mail } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -47,8 +46,8 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-xl text-slate-300 font-medium mb-2"
           >
-            Frontend Developer <span className="text-violet-400">&</span>{' '}
-            Software Developer
+            Frontend <span className="text-violet-400">&</span>{' '}
+            Full-Stack Developer
           </motion.p>
 
           <motion.p
@@ -57,9 +56,7 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="text-slate-400 leading-relaxed mb-8 max-w-md"
           >
-            I build production-grade B2B SaaS interfaces and full-stack
-            applications. Specialising in Next.js, TypeScript, and Django. Based
-            in Kampala, Uganda — available 8:30am–4:30pm.
+            I build production-grade B2B SaaS interfaces and full-stack applications — from Next.js frontends to Django and ASP.NET backends. Based in Kampala, Uganda.
           </motion.p>
 
           <motion.div

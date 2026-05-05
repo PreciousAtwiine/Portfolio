@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 })
 export const metadata: Metadata = {
-  title: "Precious Atwiine | Fullstack Developer",
+  title: "Precious Atwiine | Full-Stack Developer",
   description:
     "Fullstack Developer specialising in Django, Next.js, TypeScript and React. Based in Kampala, Uganda.",
 }
