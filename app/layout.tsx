@@ -11,9 +11,9 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 })
 export const metadata: Metadata = {
-  title: "Precious Atwiine | Frontend Developer",
+  title: "Precious Atwiine | Fullstack Developer",
   description:
-    "Frontend Developer specialising in Next.js, TypeScript and React. Based in Kampala, Uganda.",
+    "Fullstack Developer specialising in Django, Next.js, TypeScript and React. Based in Kampala, Uganda.",
 }
 
 export default function RootLayout({

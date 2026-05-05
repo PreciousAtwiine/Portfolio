@@ -30,8 +30,8 @@ export default function Navbar() {
     >
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="font-extrabold text-xl tracking-tight">
-          <span className="gradient-text">Precious</span>
-          <span className="text-violet-400">.</span>
+          <span className="gradient-text">Precious </span>
+          <span className="text-violet-400">Atwiine</span>
         </a>
 
         {/* Desktop links */}

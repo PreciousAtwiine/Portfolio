@@ -122,27 +122,23 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center"
         >
-          <div className="relative float">
+          <div className="relative w-72 h-72 md:w-80 md:h-80 float">
             {/* Spinning gradient ring */}
-            <div className="absolute inset-0 rounded-full spin-slow">
-              <div className="w-full h-full rounded-full bg-linear-to-r from-violet-600 via-teal-400 to-pink-500 p-1">
-                <div className="w-full h-full rounded-full bg-[#0a0a0f]" />
-              </div>
+            <div className="absolute inset-0 rounded-full spin-slow p-1 bg-gradient-to-r from-violet-600 via-teal-400 to-pink-500">
+              <div className="w-full h-full rounded-full bg-[#0a0a0f]" />
             </div>
 
             {/* Glow behind */}
             <div className="absolute inset-4 rounded-full bg-linear-to-br from-violet-600/40 to-teal-500/40 blur-2xl" />
 
             {/* Photo */}
-            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#0a0a0f] glow">
-              <Image
-                src="/precious.jpeg"
-                alt="Precious Atwiine"
-                fill
-                className="object-cover object-top"
-                priority
-              />
-            </div>
+            <div className="absolute inset-1 rounded-full overflow-hidden glow">
+            <img
+              src="/atwiine.jpeg"
+              alt="Precious Atwiine"
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
