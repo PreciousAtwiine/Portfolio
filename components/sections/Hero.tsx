@@ -1,8 +1,8 @@
-"use client"
-import { motion } from "framer-motion"
-import { ArrowDown,Mail } from "lucide-react"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
-import Image from "next/image"
+'use client'
+import { motion } from 'framer-motion'
+import { ArrowDown, Mail } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -47,7 +47,8 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-xl text-slate-300 font-medium mb-2"
           >
-            Frontend Developer <span className="text-violet-400">&</span> Software Developer
+            Frontend Developer <span className="text-violet-400">&</span>{' '}
+            Software Developer
           </motion.p>
 
           <motion.p
@@ -56,9 +57,9 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="text-slate-400 leading-relaxed mb-8 max-w-md"
           >
-            I build production-grade B2B SaaS interfaces and full-stack applications.
-            Specialising in Next.js, TypeScript, and Django. Based in Kampala, Uganda —
-            available 8:30am–4:30pm.
+            I build production-grade B2B SaaS interfaces and full-stack
+            applications. Specialising in Next.js, TypeScript, and Django. Based
+            in Kampala, Uganda — available 8:30am–4:30pm.
           </motion.p>
 
           <motion.div
@@ -81,7 +82,7 @@ export default function Hero() {
             >
               Download CV
             </a>
-</motion.div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -89,16 +90,26 @@ export default function Hero() {
             transition={{ delay: 0.8 }}
             className="flex items-center gap-5 mt-8"
           >
-            <a href="https://github.com/PreciousAtwiine" target="_blank" rel="noreferrer"
-              className="text-slate-400 hover:text-violet-400 transition-colors">
+            <a
+              href="https://github.com/PreciousAtwiine"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-violet-400 transition-colors"
+            >
               <FaGithub size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
-              className="text-slate-400 hover:text-teal-400 transition-colors">
+            <a
+              href="https://www.linkedin.com/in/precious-atwiine-83128a223/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-teal-400 transition-colors"
+            >
               <FaLinkedin size={20} />
             </a>
-            <a href="mailto:preciousinshuti3@gmail.com"
-              className="text-slate-400 hover:text-pink-400 transition-colors">
+            <a
+              href="mailto:preciousinshuti3@gmail.com"
+              className="text-slate-400 hover:text-pink-400 transition-colors"
+            >
               <Mail size={20} />
             </a>
           </motion.div>
@@ -125,7 +136,7 @@ export default function Hero() {
             {/* Photo */}
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#0a0a0f] glow">
               <Image
-                src="/precious.jpg"
+                src="/precious.jpeg"
                 alt="Precious Atwiine"
                 fill
                 className="object-cover object-top"
@@ -143,7 +154,10 @@ export default function Hero() {
         transition={{ delay: 1.4 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <a href="#about" className="text-slate-500 hover:text-slate-300 transition-colors">
+        <a
+          href="#about"
+          className="text-slate-500 hover:text-slate-300 transition-colors"
+        >
           <ArrowDown size={20} className="animate-bounce" />
         </a>
       </motion.div>
