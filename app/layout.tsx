@@ -1,11 +1,15 @@
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google"
+//import { Geist } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/Footer"
 import Navbar from '@/components/Navbar';
 
-const geist = Geist({ subsets: ["latin"] })
-
+//const geist = Geist({ subsets: ["latin"] })
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+})
 export const metadata: Metadata = {
   title: "Precious Atwiine | Frontend Developer",
   description:
@@ -19,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geist.className} bg-background text-foreground antialiased`}>
+      <body className={`${jakarta.className} bg-[#0a0a0f] text-slate-200 antialiased noise`}>
         <Navbar />
         {children}
         <Footer />
