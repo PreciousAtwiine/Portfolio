@@ -3,7 +3,6 @@ import {useState} from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 import { FaGithub } from "react-icons/fa"
-import { Badge } from "@/components/ui/badge"
 import { projects } from "@/lib/projects"
 
 const tabs = ["All", "Frontend", "Fullstack"] as const
