@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { FaGithub } from "react-icons/fa"
 import { Badge } from "@/components/ui/badge"
 import { projects } from "@/lib/projects"
 
@@ -36,7 +37,7 @@ export default function Projects() {
                   {project.github && (
                     <a href={project.github} target="_blank" rel="noreferrer"
                       className="text-muted-foreground hover:text-foreground transition-colors">
-                      <Github size={17} />
+                      <FaGithub size={17} />
                     </a>
                   )}
                   {project.live && (

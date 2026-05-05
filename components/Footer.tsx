@@ -1,4 +1,5 @@
-import { Github, LinkedinIcon, Mail } from "lucide-react"
+import { Mail } from "lucide-react"
+import { FaLinkedin,FaGithub } from "react-icons/fa"
 
 export default function Footer() {
   return (
@@ -10,11 +11,11 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           <a href="https://github.com/PreciousAtwiine" target="_blank" rel="noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github size={18} />
+            <FaGithub size={18} />
           </a>
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer"
+          <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors">
-            <LinkedinIcon size={18} />
+            <FaLinkedin size={18} />
           </a>
           <a href="mailto:preciousinshuti3@gmail.com"
             className="text-muted-foreground hover:text-foreground transition-colors">
