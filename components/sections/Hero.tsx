@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown, Github, Linkedin } from "lucide-react"
+import { ArrowDown } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
@@ -36,11 +37,11 @@ export default function Hero() {
           </Button>
           <a href="https://github.com/PreciousAtwiine" target="_blank" rel="noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github size={22} />
+            <FaGithub size={22} />
           </a>
           <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin size={22} />
+            <FaLinkedin size={22} />
           </a>
         </div>
       </motion.div>
