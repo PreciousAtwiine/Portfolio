@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Precious Atwiine | Full-Stack Developer",
   description:
     "Fullstack Developer specialising in Django, Next.js, TypeScript and React. Based in Kampala, Uganda.",
+  verification: {
+    google: "3Hh2dkHT-3wE-3-qZYENN2uILPJfpBIVUqyYnj33ccE",
+  },
 }
 
 export default function RootLayout({
