@@ -7,11 +7,9 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      {/* Background blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-600/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.12),transparent_38%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(13,148,136,0.1),transparent_36%)]" />
       </div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
@@ -34,7 +32,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl font-extrabold leading-tight mb-4"
+            className="text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white"
           >
             Precious
             <br />
@@ -45,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-slate-300 font-medium mb-2"
+            className="text-xl text-slate-200 font-medium mb-2"
           >
             Frontend <span className="text-violet-400">&</span>{' '}
             Full-Stack Developer
@@ -55,7 +53,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-slate-400 leading-relaxed mb-8 max-w-md"
+            className="text-slate-300 leading-relaxed mb-8 max-w-md text-[1.02rem]"
           >
             I build production-grade B2B SaaS interfaces and full-stack applications — from Next.js frontends to Django and ASP.NET backends. Based in Kampala, Uganda.
           </motion.p>
@@ -88,72 +86,50 @@ export default function Hero() {
             transition={{ delay: 0.8 }}
             className="flex items-center gap-5 mt-8"
           >
-            <a
-              href="https://github.com/PreciousAtwiine"
-              target="_blank"
-              rel="noreferrer"
-              className="text-slate-400 hover:text-violet-400 transition-colors"
-            >
+            <a href="https://github.com/PreciousAtwiine" target="_blank" rel="noreferrer"
+              className="text-slate-400 hover:text-white transition-colors">
               <FaGithub size={20} />
             </a>
-            <a
-              href="https://www.linkedin.com/in/precious-atwiine-83128a223/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-slate-400 hover:text-teal-400 transition-colors"
-            >
+            <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
+              className="text-slate-400 hover:text-white transition-colors">
               <FaLinkedin size={20} />
             </a>
-            <a
-              href="mailto:preciousinshuti3@gmail.com"
-              className="text-slate-400 hover:text-pink-400 transition-colors"
-            >
+            <a href="mailto:preciousinshuti3@gmail.com"
+              className="text-slate-400 hover:text-white transition-colors">
               <Mail size={20} />
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Photo side */}
+        {/* Photo side — flat ring, no spinning gradient / no blur glow behind face */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center"
         >
-          <div className="relative w-72 h-72 md:w-80 md:h-80 float">
-            {/* Spinning gradient ring */}
-            <div className="absolute inset-0 rounded-full spin-slow p-1 bg-gradient-to-r from-violet-600 via-teal-400 to-pink-500">
-              <div className="w-full h-full rounded-full bg-[#0a0a0f]" />
+          <div className="relative w-72 h-72 md:w-80 md:h-80">
+            <div className="absolute inset-0 rounded-full border border-slate-700/80 bg-slate-900/80" />
+            <div className="absolute inset-3 rounded-full overflow-hidden border border-slate-800">
+              <Image
+                src="/precious.png"
+                alt="Precious Atwiine"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
-
-            {/* Glow behind */}
-            <div className="absolute inset-4 rounded-full bg-linear-to-br from-violet-600/40 to-teal-500/40 blur-2xl" />
-
-            {/* Photo */}
-            <div className="absolute inset-1 rounded-full overflow-hidden glow">
-      <Image
-        src="/precious.png"
-        alt="Precious Atwiine"
-        fill
-        className="object-cover object-top"
-        priority
-      />
-    </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <a
-          href="#about"
-          className="text-slate-500 hover:text-slate-300 transition-colors"
-        >
+        <a href="#about" className="text-slate-500 hover:text-slate-200 transition-colors">
           <ArrowDown size={20} className="animate-bounce" />
         </a>
       </motion.div>
