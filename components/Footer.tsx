@@ -1,27 +1,32 @@
 import { Mail } from "lucide-react"
-import { FaLinkedin,FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { socialLinks } from "@/lib/site"
+
+const iconLink =
+  "inline-flex h-10 w-10 items-center justify-center rounded-md text-fg-muted transition-colors hover:bg-panel hover:text-fg"
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-8">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-slate-500">
-          © {new Date().getFullYear()} Atwiine Precious Mwebaze.
-        </p>
-        <div className="flex items-center gap-5">
-          <a href="https://github.com/PreciousAtwiine" target="_blank" rel="noreferrer"
-            className="text-slate-500 hover:text-violet-400 transition-colors">
-            <FaGithub size={18} />
-          </a>
-          <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
-            className="text-slate-500 hover:text-teal-400 transition-colors">
-            <FaLinkedin size={18} />
-          </a>
-          <a href="mailto:preciousinshuti3@gmail.com"
-            className="text-slate-500 hover:text-pink-400 transition-colors">
-            <Mail size={18} />
-          </a>
-        </div>
+    <footer className="border-t border-line px-6 py-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
+        <p className="text-sm text-fg-muted">© {new Date().getFullYear()} Atwiine Precious Mwebaze.</p>
+        <ul aria-label="Social links" className="flex items-center gap-1">
+          <li>
+            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)" className={iconLink}>
+              <FaGithub aria-hidden="true" size={18} />
+            </a>
+          </li>
+          <li>
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" className={iconLink}>
+              <FaLinkedin aria-hidden="true" size={18} />
+            </a>
+          </li>
+          <li>
+            <a href={`mailto:${socialLinks.email}`} aria-label={`Email ${socialLinks.email}`} className={iconLink}>
+              <Mail aria-hidden="true" size={18} />
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   )

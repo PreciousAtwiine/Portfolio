@@ -1,138 +1,79 @@
-'use client'
-import { motion } from 'framer-motion'
-import { ArrowDown, Mail } from 'lucide-react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import Image from 'next/image'
+import Image from "next/image"
+import { ArrowRight, Download, Mail } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
+import Reveal from "@/components/Reveal"
+import { socialLinks } from "@/lib/site"
+
+const iconLink =
+  "inline-flex h-10 w-10 items-center justify-center rounded-md text-fg-muted transition-colors hover:bg-panel hover:text-fg"
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.12),transparent_38%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(13,148,136,0.1),transparent_36%)]" />
-      </div>
-
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Text side */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-teal-400 text-sm font-semibold tracking-[0.3em] uppercase mb-4"
+    <section aria-labelledby="hero-title" className="px-6 pb-24 pt-32 sm:pt-36 md:pb-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1fr_auto] md:gap-16 lg:gap-24">
+        <Reveal>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-muted">
+            <span className="whitespace-nowrap">Software developer</span> ·{" "}
+            <span className="whitespace-nowrap">Kampala, Uganda</span>
+          </p>
+          <h1
+            id="hero-title"
+            className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-fg sm:text-6xl lg:text-7xl"
           >
-            Hello, I&apos;m
-          </motion.p>
+            Precious Atwiine<span className="-ml-[0.04em] text-brand">.</span>
+          </h1>
+          <p className="mt-5 text-xl text-fg-soft sm:text-2xl">Building digital solutions through code.</p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white"
-          >
-            Precious
-            <br />
-            <span className="gradient-text">Atwiine</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-xl text-slate-200 font-medium mb-2"
-          >
-            Frontend <span className="text-violet-400">&</span>{' '}
-            Full-Stack Developer
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-slate-300 leading-relaxed mb-8 max-w-md text-[1.02rem]"
-          >
-            I build production-grade B2B SaaS interfaces and full-stack applications — from Next.js frontends to Django and ASP.NET backends. Based in Kampala, Uganda.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex items-center gap-4 flex-wrap"
-          >
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
-              className="bg-linear-to-r from-violet-600 to-teal-500 text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+              className="inline-flex h-11 items-center gap-2 rounded-md bg-brand-solid px-5 font-semibold text-white transition-colors hover:bg-brand-solid-hover"
             >
-              View my work
+              View projects
+              <ArrowRight aria-hidden="true" size={17} />
             </a>
-
             <a
               href="/cv.pdf"
               download
-              className="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-full hover:border-violet-500 hover:text-violet-400 transition-all"
+              className="inline-flex h-11 items-center gap-2 rounded-md border border-line-strong px-5 font-semibold text-fg transition-colors hover:bg-panel"
             >
+              <Download aria-hidden="true" size={17} />
               Download CV
             </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="flex items-center gap-5 mt-8"
-          >
-            <a href="https://github.com/PreciousAtwiine" target="_blank" rel="noreferrer"
-              className="text-slate-400 hover:text-white transition-colors">
-              <FaGithub size={20} />
-            </a>
-            <a href="https://www.linkedin.com/in/precious-atwiine-83128a223/" target="_blank" rel="noreferrer"
-              className="text-slate-400 hover:text-white transition-colors">
-              <FaLinkedin size={20} />
-            </a>
-            <a href="mailto:preciousinshuti3@gmail.com"
-              className="text-slate-400 hover:text-white transition-colors">
-              <Mail size={20} />
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* Photo side — flat ring, no spinning gradient / no blur glow behind face */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="flex justify-center"
-        >
-          <div className="relative w-72 h-72 md:w-80 md:h-80">
-            <div className="absolute inset-0 rounded-full border border-slate-700/80 bg-slate-900/80" />
-            <div className="absolute inset-3 rounded-full overflow-hidden border border-slate-800">
-              <Image
-                src="/precious.png"
-                alt="Precious Atwiine"
-                fill
-                className="object-cover object-top"
-                priority
-              />
-            </div>
           </div>
-        </motion.div>
-      </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <a href="#about" className="text-slate-500 hover:text-slate-200 transition-colors">
-          <ArrowDown size={20} className="animate-bounce" />
-        </a>
-      </motion.div>
+          <ul aria-label="Social links" className="-ml-2.5 mt-8 flex items-center gap-1">
+            <li>
+              <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)" className={iconLink}>
+                <FaGithub aria-hidden="true" size={19} />
+              </a>
+            </li>
+            <li>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" className={iconLink}>
+                <FaLinkedin aria-hidden="true" size={19} />
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${socialLinks.email}`} aria-label={`Email ${socialLinks.email}`} className={iconLink}>
+                <Mail aria-hidden="true" size={19} />
+              </a>
+            </li>
+          </ul>
+        </Reveal>
+
+        <Reveal delay={0.08} className="w-full max-w-[18rem] justify-self-center sm:max-w-[20rem] md:w-[20rem] lg:w-[22rem] lg:max-w-none">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-line bg-panel">
+            <Image
+              src="/precious.png"
+              alt="Portrait of Precious Atwiine"
+              fill
+              preload
+              sizes="(min-width: 1024px) 352px, (min-width: 640px) 320px, 288px"
+              className="object-cover object-[50%_28%]"
+            />
+          </div>
+        </Reveal>
+      </div>
     </section>
   )
 }
