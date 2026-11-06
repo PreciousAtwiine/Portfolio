@@ -260,6 +260,7 @@ export const projects: Project[] = [
     year: "2025",
     tech: ["Python", "Django", "PostgreSQL", "Bootstrap", "HTML", "CSS"],
     links: [
+      { kind: "live", label: "Live site", href: "https://merk-establishments.onrender.com/" },
       { kind: "source", label: "GitHub", href: "https://github.com/PreciousAtwiine/MERK-Establishments" },
     ],
     screenshots: [
